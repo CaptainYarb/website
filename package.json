@@ -1,0 +1,43 @@
+{
+  "name": "blazedd-website",
+  "version": "1.0.0",
+  "description": "Website at blazedd.com",
+  "main": "app.js",
+  "scripts": {
+    "test": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blazedd/website.git"
+  },
+  "author": "Jonathan Yarbor",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/blazedd/website/issues"
+  },
+  "homepage": "https://github.com/blazedd/website#readme",
+  "dependencies": {
+    "brotli-webpack-plugin": "^0.3.0",
+    "compression-webpack-plugin": "^0.4.0",
+    "css-loader": "^0.28.4",
+    "csslint": "^1.0.5",
+    "eslint": "^4.0.0",
+    "eslint-config-nodecraft": "^1.0.6",
+    "eslint-plugin-json": "^1.2.0",
+    "eslint-plugin-node": "^5.0.0",
+    "express": "^4.15.3",
+    "extract-text-webpack-plugin": "^2.1.2",
+    "file-loader": "^0.11.2",
+    "font-awesome": "^4.7.0",
+    "optimize-js-plugin": "0.0.4",
+    "postcss-cssnext": "^2.11.0",
+    "postcss-import": "^10.0.0",
+    "postcss-loader": "^2.0.6",
+    "postcss-normalize": "^3.0.0",
+    "postcss-plugin-context": "^2.0.0",
+    "style-loader": "^0.18.2",
+    "uglify-js": "^3.0.18",
+    "url-loader": "^0.5.9",
+    "webpack": "^3.0.0"
+  }
+}

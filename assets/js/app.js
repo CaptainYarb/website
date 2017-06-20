@@ -1,3 +1,5 @@
+require('font-awesome/css/font-awesome.css');
+
 var scene = new THREE.Scene();
 var camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 5000);
 	camera.position.z = 500;
@@ -7,7 +9,7 @@ var camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHei
 var loader = new THREE.TextureLoader();
 
 var textures = {
-	galaxy: loader.load("/assets/images/galaxy.png")
+	galaxy: loader.load("/images/galaxy.png")
 }
 
 var materials = {
@@ -42,6 +44,10 @@ scene.add(cube);
 
 var count = 5000;
 
+function sample(input){
+	return input[Math.floor((Math.random()*this.length))];
+}
+
 var geos = [];
 while(geos.length < 10){
 	geos.push(new THREE.SphereGeometry((geos.length*.10)+0.10, 5, 5))
@@ -49,7 +55,7 @@ while(geos.length < 10){
 
 var group = new THREE.Object3D();
 while(count > 0){
-	var star = new THREE.Mesh(_.sample(geos), materials.white);
+	var star = new THREE.Mesh(sample(geos), materials.white);
 	star.position.x = Math.random() * 5000 - 2500;
 	star.position.y = Math.random() * 5000 - 2500;
 	star.position.z = Math.random() * 5000 - 2500;
