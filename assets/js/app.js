@@ -1,3 +1,4 @@
+'use strict';
 require('font-awesome/css/font-awesome.css');
 
 var scene = new THREE.Scene();
@@ -26,8 +27,7 @@ var materials = {
 var renderer = new THREE.WebGLRenderer();
 
 var resize = function(){
-	var w = window,
-		d = document,
+	var d = document,
 		e = d.documentElement,
 		g = d.getElementsByTagName('body')[0],
 		w = e.clientWidth || w.innerWidth || g.clientWidth,

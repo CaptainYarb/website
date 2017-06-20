@@ -4,5 +4,8 @@
 	],
 	"plugins": [
 		"node"
-	]
+	],
+	"globals": {
+		"THREE": 1
+	}
 }
