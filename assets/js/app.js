@@ -45,7 +45,7 @@ scene.add(cube);
 var count = 5000;
 
 function sample(input){
-	return input[Math.floor((Math.random() * this.length))];
+	return input[Math.floor((Math.random() * input.length))];
 }
 
 var geos = [];
