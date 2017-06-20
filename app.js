@@ -12,6 +12,6 @@ app.get(['/', 'index.html'], function(req, res){
 	return res.sendFile(path.join(__dirname, 'assets/index.html'));
 });
 
-app.listen(80, function () {
-  console.log('Server Online');
-})
+app.listen(80, function(){
+	console.log('Server Online');
+});

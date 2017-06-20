@@ -2,15 +2,15 @@ require('font-awesome/css/font-awesome.css');
 
 var scene = new THREE.Scene();
 var camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 5000);
-	camera.position.z = 500;
-	camera.rotation.x = 135;
+camera.position.z = 500;
+camera.rotation.x = 135;
 
 
 var loader = new THREE.TextureLoader();
 
 var textures = {
 	galaxy: loader.load("/images/galaxy.png")
-}
+};
 
 var materials = {
 	white: new THREE.MeshBasicMaterial({
@@ -20,7 +20,7 @@ var materials = {
 		map: textures.galaxy,
 		side: THREE.DoubleSide
 	})
-}
+};
 
 
 var renderer = new THREE.WebGLRenderer();
@@ -33,7 +33,7 @@ var resize = function(){
 		w = e.clientWidth || w.innerWidth || g.clientWidth,
 		h = e.clientHeight || w.innerHeight || g.clientHeight;
 	renderer.setSize(w, h);
-}
+};
 resize();
 window.onresize = resize;
 document.body.appendChild(renderer.domElement);
@@ -45,12 +45,12 @@ scene.add(cube);
 var count = 5000;
 
 function sample(input){
-	return input[Math.floor((Math.random()*this.length))];
+	return input[Math.floor((Math.random() * this.length))];
 }
 
 var geos = [];
 while(geos.length < 10){
-	geos.push(new THREE.SphereGeometry((geos.length*.10)+0.10, 5, 5))
+	geos.push(new THREE.SphereGeometry((geos.length * .10) + 0.10, 5, 5));
 }
 
 var group = new THREE.Object3D();
@@ -67,7 +67,7 @@ scene.add(group);
 var orbit = {
 	angle: 0,
 	range: 1500,
-	speed: 0.075 * Math.PI/180
+	speed: 0.075 * Math.PI / 180
 };
 
 function render(){
