@@ -11,6 +11,128 @@ canvas{
 	top: 0;
 	left: 0;
 }
+.clear{
+	clear: both;
+	overflow: hidden;
+}
+
+#workshop{
+	z-index: 2;
+	display: block;
+	position: absolute;
+	left: 0;
+	right: 0;
+	width: 80%;
+	max-width: 1024px;
+	background-color: #fff;
+	padding: 15px;
+	margin: 50px auto;
+	color: #000;
+	border-radius: 15px;
+}
+#workshop #logo{
+	text-align: center;
+}
+#workshop #logo img{
+	max-width: 100%;
+	height: auto;
+}
+
+#workshop h1{
+	text-align: center;
+	font-size: 28px;
+	font-weight: bold;
+	margin: 0;
+}
+#workshop h2{
+	font-size: 24px;
+	text-align: center;
+	font-weight: lighter;
+	margin: 0 0 25px;
+}
+#workshop #price{
+	font-size: 13px;
+	display: block;
+	text-align: center;
+}
+
+#workshop #form{
+	margin: 0 -15px;
+	background: #ff8100;
+	color: #fff;
+	text-align: center;
+}
+
+
+#workshop h4{
+	font-size: 22px;
+	font-weight: lighter;
+	margin: 0 0 5px;
+}
+#workshop h5{
+	padding: 25px;
+	background-color: #eee;
+	text-align: center;
+	font-size: 22px;
+	font-weight: lighter;
+	margin: 0 -15px 15px;
+}
+
+#workshop h4 small{
+	padding: 2px;
+	display: inline-block;
+	background-color: #eee;
+	color: #6d6d6d;
+	font-size: 14px;
+	border-radius: 2px;
+}
+
+#workshop .teaser{
+	box-sizing: border-box;
+	display: block;
+	float: left;
+	width: 50%;
+	min-height: 125px;
+	padding: 0 15px;
+	margin: 0 auto 20px;
+}
+
+#workshop .teaser.break p{
+	font-size: 12px;
+}
+
+#workshop .bio{
+	position: relative;
+	box-sizing: border-box;
+	width: 50%;
+	float: left;
+	padding-right: 25px;
+	margin-bottom: 2em;
+}
+#workshop .bio img{
+	position: relative;
+	top: 0;
+	left: 0;
+	float: left;
+	margin-right: 10px;
+}
+#workshop .bio h6{
+	font-size: 24px;
+	margin: 0;
+	padding: 0;
+}
+#workshop .bio h6 small{
+	display: block;
+	font-size: 12px;
+}
+#workshop .bio p{
+	font-size: 12px;
+}
+
+#workshop ul{
+	margin: 0 0 0 25px;
+	padding: 0;
+}
 
 #bio{
 	z-index: 2;
@@ -25,7 +147,8 @@ canvas{
 	border: 1px solid black;
 	padding-left: 85px;
 }
-#bio img{
+#bio img,
+.bio img{
 	height: 150px;
 	width: 150px;
 	position: absolute;
@@ -97,5 +220,9 @@ canvas{
 
  	#bio #social .fa{
 		font-size: 32px;
+	}
+
+	.bio, .teaser{
+		width: 100% !important;
 	}
  }
