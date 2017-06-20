@@ -17,7 +17,9 @@
   },
   "homepage": "https://github.com/blazedd/website#readme",
   "dependencies": {
-    "express": "4.15.3",
+    "express": "4.15.3"
+  },
+  "devDependencies": {
     "brotli-webpack-plugin": "0.3.0",
     "compression-webpack-plugin": "0.4.0",
     "css-loader": "0.28.4",
