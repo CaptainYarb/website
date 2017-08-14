@@ -1,5 +1,5 @@
 FROM node:6-alpine
-MAINTAINER blazedd
+MAINTAINER node
 
 EXPOSE 8080:80
 WORKDIR /home/website
