@@ -1,16 +1,20 @@
-FROM node:6-alpine
+FROM node:8.3.0-alpine
+MAINTAINER blazedd
 
-COPY . /home/website
-
-RUN cd /home/website \
-	npm install \
-	node ./node_modules/webpack/bin/webpack.js -p --progress \
-	npm prune --production
-RUN cd /home/website \
-	npm test
-
-EXPOSE 80
-
+EXPOSE 8080:80
 WORKDIR /home/website
+ENV REFRESHED_AT 2016-04-28
+ENV NODE_ENV=production
+
+ADD package.json .
+RUN npm install --production=false
+
+COPY . .
+RUN node ./node_modules/webpack/bin/webpack.js -p --progress --verbose
+RUN npm prune --production
 USER nobody
-CMD ["NPM", "start"]
+
+
+#RUN npm test
+
+CMD ["npm", "start"]

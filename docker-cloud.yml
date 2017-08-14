@@ -1,0 +1,7 @@
+version: '3.3'
+services:
+  website:
+    image: blazedd/website
+    command: node app.js
+    port:
+      - 8080:80

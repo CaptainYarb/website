@@ -4,9 +4,7 @@ var path = require('path');
 
 var webpack = require("webpack"),
 	OptimizeJsPlugin = require("optimize-js-plugin"),
-	ExtractTextPlugin = require("extract-text-webpack-plugin"),
-	CompressionPlugin = require("compression-webpack-plugin"),
-	BrotliPlugin = require('brotli-webpack-plugin');
+	ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 var config = {
 	profile: true,
@@ -28,7 +26,7 @@ var config = {
 			'THREE': './libs/three.min.js'
 		}),
 		new webpack.EnvironmentPlugin({
-			NODE_ENV: 'development' // use 'development' unless process.env.NODE_ENV is defined
+			NODE_ENV: process.env.NODE_ENV || 'development' // use 'development' unless process.env.NODE_ENV is defined
 		}),
 		new webpack.DefinePlugin({
 			'process.env': {
@@ -137,19 +135,6 @@ if(process.env.NODE_ENV === 'production'){
 	}));
 	config.plugins.push(new OptimizeJsPlugin({
 		sourceMap: false
-	}));
-	config.plugins.push(new CompressionPlugin({
-		asset: "[path].gz[query]",
-		algorithm: "zopfli",
-		test: /\.(js|css)$/,
-		minRatio: 0,
-		verbose: true
-	}));
-	config.plugins.push(new BrotliPlugin({
-		asset: '[path].br[query]',
-		test: /\.(js|css|html|svg)$/,
-		threshold: 10240,
-		minRatio: 0.8
 	}));
 }
 
