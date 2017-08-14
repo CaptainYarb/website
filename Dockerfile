@@ -1,4 +1,4 @@
-FROM node:8.3.0-alpine
+FROM node:6-alpine
 MAINTAINER blazedd
 
 EXPOSE 8080:80
